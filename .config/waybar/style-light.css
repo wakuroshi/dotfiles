@@ -1,0 +1,67 @@
+@define-color background #f2e9e1;
+@define-color foreground #575279;
+@define-color colored #56949f;
+@define-color colored2 #d7827e;
+
+* {
+    font-family: BlexMonoNerdFont;
+    font-weight: 600;
+    font-size:14px;
+  }
+
+
+
+window#waybar {
+    background: @colored;
+}
+
+#disk, #memory, #cpu, #wireplumber, #network, #tray {
+    color: @foreground;
+    padding: 0px 4px;
+    background-color: @background;
+}
+
+#battery {
+    color: @foreground;
+    padding: 0px 4px;
+    background-color: @background;
+}
+
+#clock {
+    color: @foreground;
+    padding: 0px 4px;
+    background-color: @background;
+}
+
+#tags {
+  padding: 0px;
+}
+
+#mpris {
+  margin-left: 8px;
+  color: @background;
+  background-color: @colored;
+}
+
+#tags button {
+  padding: 0px 4px;
+  min-width: 0px;
+  border-radius: 0px;
+  color: @foreground;
+  background: @background;
+}
+
+#tags button.focused {
+  color: @background;
+  background-color: @colored;
+}
+
+#tags button.urgent {
+  color: @background;
+  background-color: @colored2;
+}
+
+#battery.warning, #battery.critical, #battery.urgent {
+    background-color: @colored;
+    color: @background;
+}

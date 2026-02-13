@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "5324373015726ba8",
+    "type": "split",
+    "children": [
+      {
+        "id": "12ab36cc38f7484b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4c1ec938787430c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 - Languages/Deutsch/DEU.01.a.Guten Tag.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "DEU.01.a.Guten Tag"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c96537bf97905ea4",
+    "type": "split",
+    "children": [
+      {
+        "id": "06fb175b75f90195",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80f1421caef81211",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3294f5509b7a90d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e182cdd801509af0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 248.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "63618bec30c370c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ea00c3a56a1b659",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f7562bdc2b65a4c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "04 - Languages/Deutsch/Flashcards/Guten tag.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Guten tag"
+            }
+          },
+          {
+            "id": "0fc084849780b423",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "04 - Languages/Deutsch/Flashcards/Guten tag.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Guten tag"
+            }
+          },
+          {
+            "id": "9e92eeea6a23ed90",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9922e04f15609cfe",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d48b685e15b6c902",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "04 - Languages/Deutsch/Flashcards/Guten tag.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Guten tag"
+            }
+          },
+          {
+            "id": "61cdc34ffc6b2f94",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "f4c1ec938787430c",
+  "lastOpenFiles": [
+    "Dashboard.md",
+    "04 - Languages/Deutsch/DEU.01.a.Guten Tag.md",
+    "04 - Languages/Deutsch/DEU.01. Erste Kontakte.md",
+    "04 - Languages/日本語/おやすみ.md",
+    "Untitled.md",
+    "07 - Misc/Templates/Lesson.md",
+    "07 - Misc/Templates/Lesson Language.md",
+    "07 - Misc/Templates/Programming.md",
+    "07 - Misc/Templates/Reference.md",
+    "07 - Misc/Templates/Study.md",
+    "test1.md",
+    "07 - Misc/Templates/Vocab.md",
+    "05 - Projects/Personal website.md",
+    "00 - Personal/Tasks.md",
+    "04 - Languages/日本語/おはよう.md",
+    "04 - Languages/日本語/ございます.md",
+    "04 - Languages/日本語/こんばんは.md",
+    "04 - Languages/日本語/挨拶.md",
+    "07 - Misc/Templates/Idea.md",
+    "EST.md",
+    "ELE.md",
+    "07 - Misc/Templates/Daily.md",
+    "07 - Misc/Templates/Lecture.md",
+    "07 - Misc/Templates/Concepts.md",
+    "07 - Misc/Templates/Chapter.md",
+    "Fisic.md",
+    "05 - Projects/Git",
+    "Untitled.base",
+    "01 - Journal",
+    "Study2/Calculus/Tabla de Integrales.pdf",
+    "Study2/日本語/Genki 2nd Edition/Genki I/Genki I Workbook Answer Key.pdf",
+    "07 - Misc/Media/evabanner.jpg",
+    "07 - Misc/Media/9iyw7vis2g171.jpg",
+    "07 - Misc/Media/n035ema0blp31.jpg",
+    "Study2/Electronics/Jesus Fraile Mora - Circuitos electricos - PEARSON Prentice-Hall.pdf",
+    "03 - Universidad/Fundamentos de la Electronica/ELE.1.1.Magnitudes Fundamentales.md~",
+    "07 - Misc/Templates/Lecture.md~",
+    "03 - Universidad/Fundamentos de la Electronica/4913",
+    "Study2/Statistics/Mario F. Triola - Estadistica - 9th - PEARSON Education.pdf",
+    "prueba.png"
+  ]
+}

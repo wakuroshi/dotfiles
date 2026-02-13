@@ -1,0 +1,122 @@
+{
+    "layer": "top",
+    "height": 26,
+
+    "margin-top": 0,
+    "margin-right":0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+
+    "modules-left": [
+  "river/tags",
+	"mpris"
+    ],
+    "modules-right": [
+        "disk#home",
+        "cpu",
+        "memory",
+        "network",
+        "wireplumber#sink",
+        "wireplumber#source",
+        "battery",
+        "clock#date",
+        "clock#hour"
+    ],
+
+    "river/tags": {
+        "tag-labels": ["und", "zwei", "drei", "vier", "fünf", "sechs"], 
+        "num-tags": 6,
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false,
+	"hide-vacant": false
+    },
+    "mpris": {
+        "dynamic-order": ["artist", "title"],
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} {dynamic}",
+        "dynamic-len": 100,
+        "title-len": 70,
+        "expand": false,
+        "align": 0,
+        "player-icons": {
+          "default": "▶",
+        },
+        "status-icons": {
+          "paused": "⏸"
+        }
+    },
+    "clock#date": {
+        "format": " {:%b-%d}",
+        "tooltip": false
+    },
+
+    "clock#hour": {
+        "format": "󰥔 {:%I:%M %p}",
+        "tooltip": false
+    },
+    "battery": {
+        "format": "󰁹 {capacity}",
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : " ",
+        "format-ethernet": " ",
+        "format-disconnected" : "NONET",
+        "tooltip": false,
+        "on-click": "kitty nmtui"
+    },
+
+    "wireplumber#sink": {
+        "scroll-step": 5,
+        "max-volume": 100,
+        "format": " {volume}",
+        "format-bluetooth": "󰂯 {volume}",
+        "format-muted": " {volume}",
+        "on-click": "kitty wiremix",
+        "tooltip": false
+    },
+    "wireplumber#source": {
+        "node-type": "Audio/Source",
+        "format": " {volume}",
+        "format-muted": "󰍭 {volume}",
+        "on-click": "kitty wiremix",
+        "tooltip": false
+    },
+
+    "memory": {
+      "interval": 5,
+      "format": " {percentage}"
+    },
+
+    "cpu": {
+      "interval": 5,
+      "format": " {usage}"
+    },
+    "disk#root": {
+      "interval": 30,
+      "unit": "GB",
+      "format": "󰻀 {specific_free:0.0f}GB",
+      "tooltip": false
+    },
+    "disk#home": {
+      "path": "/home",
+      "interval": 30,
+      "unit": "GB",
+      "format": " {specific_free:0.0f}GB",
+      "tooltip": false
+    },
+    "disk#data": {
+      "path": "/data",
+      "interval": 30,
+      "unit": "GB",
+      "format": " {specific_free:0.0f}GB",
+      "tooltip": false
+    }
+}

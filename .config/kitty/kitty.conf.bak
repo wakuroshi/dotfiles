@@ -1,0 +1,10 @@
+confirm_os_window_close 0
+
+detect_urls yes
+
+# BEGIN_KITTY_FONTS
+font_family      BlexMonoNerdFont
+bold_font        family='IBM Plex Mono' postscript_name=IBMPlexMono-Bold
+italic_font      IBM Plex Mono Bold Italic
+bold_italic_font IBM Plex Mono Bold Italic
+# END_KITTY_FONTS

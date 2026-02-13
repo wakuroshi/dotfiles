@@ -1,0 +1,13 @@
+{
+  "enabledCssSnippets": [
+    "dashboard",
+    "extended-colorschemes",
+    "dashboard-ReadLineLength"
+  ],
+  "cssTheme": "AnuPpuccin",
+  "textFontFamily": "BlexMono Nerd Font",
+  "interfaceFontFamily": "BlexMono Nerd Font",
+  "monospaceFontFamily": "BlexMono Nerd Font Mono",
+  "baseFontSize": 20,
+  "baseFontSizeAction": true
+}
