@@ -1,31 +1,36 @@
 #!/bin/bash
 
-DOTFILES_DIR=$(pwd)
-CONFIG_DIR="$HOME/.config"
+# Get the directory where the script is located
+DOTFILES_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
-# Colors 
+# Colors
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 RED='\033[0;31m'
-NC='\033[0m' # No Color
-
-# Functions
+NC='\033[0m'
 
 install_deps() {
-    echo -e "${BLUE}Updating system and installing dependencies...${NC}"
-    # Package install, change as you need
-    sudo pacman -Syu --needed git wofi base-devel neovim waybar fastfetch zsh kitty mpc rmpc xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland grim slurp wiremix wl-clipboard btop cava swww brightnessctl curl gcc tar playerctl pamixer mpv-mpris mpd-mpris ttf-ibmplex-mono-nerd xdg-desktop-portal-gtk ntfs-3g exfatprogs gvfs udisks2 thunar river kanshi yazi
+	echo -e "${BLUE}Updating system and installing dependencies...${NC}"
+	sudo pacman -Syu --needed stow git wofi base-devel neovim waybar fastfetch zsh kitty mpc rmpc xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland grim slurp wiremix wl-clipboard btop cava swww brightnessctl curl gcc tar playerctl pamixer mpv-mpris mpd-mpris ttf-ibmplex-mono-nerd xdg-desktop-portal-gtk ntfs-3g exfatprogs gvfs udisks2 thunar river kanshi yazi
 }
 
-copy_configs() {
-    echo -e "${BLUE}Copying .config files to $CONFIG_DIR...${NC}"
-    
-    # Ensure conf dir exists
-    mkdir -p "$CONFIG_DIR"
+stow_configs() {
+	echo -e "${BLUE}Stowing configurations...${NC}"
+	cd "$DOTFILES_DIR"
 
-    # Copy recursive verbose and backup 
-    cp -rv --backup=numbered "$DOTFILES_DIR/.config/." "$CONFIG_DIR/"   
-    echo -e "${GREEN}Copy complete! Existing files were backed up with a .~#~ suffix.${NC}"
+	# Loop through all directories in the dotfiles folder
+	for dir in */; do
+	# Remove the trailing slash for the stow command
+	package=${dir%/}
+	
+	# Skip hidden directories
+	if [[ "$package" == .* ]]; then
+	continue
+	fi
+
+	echo -e "Linking package: ${GREEN}$package${NC}"
+	stow -R "$package"
+	done
 }
 
 # Menu
@@ -39,24 +44,24 @@ echo -e "${NC}----------------------------"
 read -p "Select an option: " choice
 
 case $choice in
-    1)
-        install_deps
-        ;;
-    2)
-        copy_configs
-        ;;
-    3)
-        install_deps
-        copy_configs
-        ;;
-    q|Q)
-        echo "Exiting."
-        exit 0
-        ;;
-    *)
-        echo -e "${RED}Invalid option.${NC}"
-        exit 1
-        ;;
+	1)
+	install_deps
+	;;
+	2)
+	stow_configs
+	;;
+	3)
+	install_deps
+	stow_configs
+	;;
+	q|Q)
+	echo "Exiting."
+	exit 0
+	;;
+	*)
+	echo -e "${RED}Invalid option.${NC}"
+	exit 1
+	;;
 esac
 
 echo -e "\n${GREEN}Process finished successfully!${NC}"

@@ -1,0 +1,151 @@
+/* 1. LIGHT MODE (Default - Rose Pine Dawn) */
+:root {
+    --bg: #d7827e;        
+    --surface: #F5F2E9;   
+    --text: #575279;
+    --accent-blue: #56949f;
+    --accent-purple: #907aa9;
+    --accent-red: #d7827e;
+    --hover: #ea9d34;
+    --scanline-color: rgba(30, 0, 60, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 2. DARK MODE (Automatic - Serial Experiments/Moon Aesthetic) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #232136;        /* Deep "Wired" Purple */
+        --surface: #2a273f;   /* Slightly lighter tech-black */
+        --text: #e0def4;      /* High visibility lavender */
+        --accent-blue: #9ccfd8; /* Cyan-glow */
+        --accent-purple: #c4a7e7;
+        --accent-red: #eb6f92;
+        --hover: #f6c177;
+        --scanline-color: rgba(0, 0, 0, 0.3);
+        --shadow-color: rgba(0, 0, 0, 0.6); /* Deeper shadows for dark mode */
+    }
+}
+
+/* 3. RESET & BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    overflow-x: hidden; /* Changed from 'hidden' to allow vertical scroll if needed */
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition when system changes */
+}
+
+/* 4. LAYOUT & MODULES */
+.main-wrapper {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.main-header {
+    text-align: left;
+    border: 2px solid var(--text);
+    background-color: var(--surface);
+    padding: 20px 30px; /* Added horizontal padding for breathing room */
+    box-shadow: 8px 8px 0px var(--shadow-color);
+}
+
+.greeting {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    text-shadow: 2px 2px var(--accent-red);
+    animation: flicker 0.15s infinite;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.module {
+    background-color: var(--surface);
+    border: 2px solid var(--text);
+    padding: 20px;
+    box-shadow: 6px 6px 0px var(--shadow-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.module:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--shadow-color);
+}
+
+.module h2 {
+    font-size: 1rem;
+    background-color: var(--text);
+    color: var(--surface);
+    padding: 5px 10px;
+    margin: -20px -20px 15px -20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* 5. LINKS & STATUS */
+.module ul { list-style: none; }
+.module li {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+    padding-bottom: 4px;
+}
+
+.module a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+.module a:hover {
+    background-color: var(--accent-blue);
+    color: var(--surface);
+    padding-left: 8px;
+}
+
+/* 6. ANIMATIONS */
+@keyframes flicker {
+    0% { opacity: 0.95; }
+    50% { opacity: 1; }
+    100% { opacity: 0.98; }
+}
+
+.status-indicator {
+    width: 8px; height: 8px;
+    background-color: var(--accent-blue);
+    display: inline-block;
+    animation: pulse-sharp 1s steps(2) infinite;
+}
+
+@keyframes pulse-sharp {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
