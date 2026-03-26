@@ -9,9 +9,14 @@ BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-install_deps() {
+install_deps_arch() {
 	echo -e "${BLUE}Updating system and installing dependencies...${NC}"
 	sudo pacman -Syu --needed stow git wofi base-devel neovim waybar fastfetch zsh kitty mpc rmpc xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland grim slurp wiremix wl-clipboard btop cava swww brightnessctl curl gcc tar playerctl pamixer mpv-mpris mpd-mpris ttf-ibmplex-mono-nerd xdg-desktop-portal-gtk ntfs-3g exfatprogs gvfs udisks2 thunar river kanshi yazi
+}
+
+install_deps_void() {
+	echo -e "${GREEN}Embracing the void..."
+	sudo xbps-install -Su stow git wofi base-devel neovim Waybar fastfetch zsh kitty mpc rmpc xdg-desktop-portal xdg-desktop-portal-wlr qt6-wayland qt5-wayland grim slurp wiremix wl-clipboard btop cava swww brightnessctl curl gcc tar playerctl pamixer mpv-mpris nerd-fonts xdg-desktop-portal-gtk ntfs-3g exfatprogs gvfs udisks2 thunar river kanshi yazi
 }
 
 stow_configs() {
@@ -36,22 +41,21 @@ stow_configs() {
 # Menu
 echo -e "${GREEN}wakuroshi Arch Linux Dotfiles Installer"
 echo -e "${NC}----------------------------"
-echo "1) Install dependencies (pacman)"
-echo "2) Copy .config files to system"
-echo -e "${BLUE}3) Do both"
+echo "1) Install dependencies (Arch linux)"
+echo "2) Install dependencies (Void linux)"
+echo -e "${BLUE}3) Stow"
 echo -e "${RED}q) Quit"
 echo -e "${NC}----------------------------"
 read -p "Select an option: " choice
 
 case $choice in
 	1)
-	install_deps
+	install_deps_arch
 	;;
 	2)
-	stow_configs
+	install_deps_void
 	;;
 	3)
-	install_deps
 	stow_configs
 	;;
 	q|Q)
